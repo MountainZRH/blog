@@ -31,6 +31,8 @@
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
     
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
@@ -124,7 +126,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -204,7 +206,7 @@
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2017-05-25T07:47:32.698Z" itemprop="dateUpdated">2017-05-25 15:47:32</time>
+    Last updated: <time datetime="2017-05-25T07:47:32.698Z" itemprop="dateUpdated">2017-05-25 15:47:32</time>
 </span><br>
 
 
@@ -359,7 +361,9 @@
 
         <p>
             
-            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -415,7 +419,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/05/25/hello-world/" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay27bMBAF0Pz/T6tAVwlay/dy1AImD1eG5Fg8Wkw4j6+veF2/16sr17f155VXd1895dXdBxYGBsbHMq7bdb/p5Dv5leRZL6kYGBgHMO6DbPLIJFhf8cr3hoGBgZFs934TyZX2uRgYGBj5US/BrH0HAwMDYy2JLX40/v21sh0GBsZpjLYx8D8//8P+BgYGxocwrnIlTc32oNkG2b/8FQYGxtaMpOCVh922qTlpfNbzIBgYGB/OyM9aOXU+rjFvnWJgYOzBaIv78xZCXiwbdTYwMDA2Zdxvfa0x2QLa4+OPXBwDA2NTRlusz0e41gCTRBoDA+M0RluyT0JnW0prXyIGBsYJjLzENm9S5ofOYocYGBhbMyaVqySJbcN0XvjDwMA4gdGONayRngriGBgYJzPWimjJ3TaMLpbhMDAwDmDUU2PlMEQ7+NUOjWFgYJzAaBsAbbk/H8tYLM9hYGAcxki2uzaEMWmOvvk3gIGBsTVjEkDXiviTpPdNQMfAwNiU0Ra/kvCXHxPz4dQ3eAwMjAMYawNeeTms3Vwe3DEwME5grIXFSTszH+zIS3UYGBh7M65yzc9jbZoapcQYGBhbM54Nr3UpvwzcycvFwMDYldEmqPOgnLQcHuvHYmBgbMSYH/LmgEloxsDAwFhLTdvifh7KRwEXAwPjGEYUBINmQN4SiNoDGBgYWzOSJLZNOJ9tcxbDFhgYGNsxJglk3oBc+9y+JgwMjO0YvwD2Q6h2/ux2YAAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
@@ -465,10 +469,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = 'Learning';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = 'ZRH';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);

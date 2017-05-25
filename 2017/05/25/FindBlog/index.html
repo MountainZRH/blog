@@ -28,6 +28,8 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="FindBlog">
     
+        <link rel="alternate" type="application/atom+xml" title="Hexo" href="/atom.xml">
+    
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
     <script>window.lazyScripts=[]</script>
@@ -121,7 +123,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -185,7 +187,7 @@
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2017-05-25T07:52:52.096Z" itemprop="dateUpdated">2017-05-25 15:52:52</time>
+    Last updated: <time datetime="2017-05-25T07:52:52.096Z" itemprop="dateUpdated">2017-05-25 15:52:52</time>
 </span><br>
 
 
@@ -340,7 +342,9 @@
 
         <p>
             
-            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
@@ -396,7 +400,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/05/25/FindBlog/" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzUlEQVR42u3aQQ6DMAwFUe5/abqthID5dh2oNFkhisijC8t2vG147Yf1ff/smtzZJpZcuXLb3P1yXbOO7yGfR+4fn5ErV+56Ltk+JZLF3y9Xrtw3c9NUJk2V5MqV+1/c45Nk404hJFeu3Ge5JAXhYYuXN4O1mly5chtc3qWcux7p78qVK7fE7bQwzoJXWiAFu8uVK3cJt3OUUitdSLvk5j1y5cpdyOXNzbRpQjKW4CPlypU7zOVNjf5BCGlzBBmZXLlyx7jk8IPTO+kLb63KlSt3DZckNJ1D03SMA0nkypU7xuUb8+SmNqKBSia5cuU+yuUbp9unweumVpMrV+4Ylzcy0uNSQgxGNOTKlbucmyYrnUqLD3acBjK5cuWOcdOj0M7IRZoYoelRuXLljnFrDdPOcFUtDZIrV+5KbjqEURurqgU+dKAiV67cMW6a0NTu9FMuuXLlTnP3cKWfxxuyqAUjV67cJdx+F4IQ+bFNWlDJlSt3jpuOQfCwxYur4Fe5cuUu5P6qKOJBigRNNDMiV67cF3BrCQpppKK/Q65cua/k8uSmU3sNxl25cuViblr81AqbNCDejF/IlSt3jFs7+EzHLHiW0gmUcuXKbXM/JzogHmPpbiIAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
@@ -446,10 +450,10 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
     var OriginTitile = document.title, titleTime;
     document.addEventListener('visibilitychange', function() {
         if (document.hidden) {
-            document.title = '死鬼去哪里了！';
+            document.title = 'Learning';
             clearTimeout(titleTime);
         } else {
-            document.title = '(つェ⊂)咦!又好了!';
+            document.title = 'ZRH';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             },2000);
